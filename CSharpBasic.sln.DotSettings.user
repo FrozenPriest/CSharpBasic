@@ -5,5 +5,7 @@
     &lt;TestId&gt;NUnit3x::0C7C9AF8-2A56-462C-B2B5-F75CF64F269A::net5.0::Tests.BinaryTreeTests.TestInsert&lt;/TestId&gt;&#xD;
     &lt;TestId&gt;NUnit3x::0C7C9AF8-2A56-462C-B2B5-F75CF64F269A::net5.0::Tests.BinaryTreeTests.TestInsertReplace&lt;/TestId&gt;&#xD;
     &lt;TestId&gt;NUnit3x::0C7C9AF8-2A56-462C-B2B5-F75CF64F269A::net5.0::Tests.BinaryTreeTests&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::0C7C9AF8-2A56-462C-B2B5-F75CF64F269A::net5.0::Tests.SorterTests.TestSort&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::0C7C9AF8-2A56-462C-B2B5-F75CF64F269A::net5.0::Tests.SorterTests&lt;/TestId&gt;&#xD;
   &lt;/TestAncestor&gt;&#xD;
 &lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>
