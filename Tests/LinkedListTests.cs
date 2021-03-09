@@ -4,7 +4,7 @@ using NUnit.Framework;
 
 namespace Tests
 {
-    public class Tests
+    public class LinkedListTests
     {
         [SetUp]
         public void Setup()
@@ -76,6 +76,35 @@ namespace Tests
             });
             Assert.AreEqual(8, list[list.Size-1]);
             Assert.AreEqual(size-1, list.Size);
+        }
+        
+        [Test]
+        public void TestInsertBefore()
+        {
+            var list = GenerateList();
+            var size = list.Size;
+            Assert.DoesNotThrow(delegate
+            {
+                list.InsertBefore(size-2, 999);
+            });
+            Assert.AreEqual(999, list[list.Size-3]);
+            Assert.AreEqual(8, list[list.Size-2]);
+            Assert.AreEqual(7, list[list.Size-4]);
+            Assert.AreEqual(size+1, list.Size);
+        }
+        
+        public void TestInsertAfter()
+        {
+            var list = GenerateList();
+            var size = list.Size;
+            Assert.DoesNotThrow(delegate
+            {
+                list.InsertAfter(size-2, 999);
+            });
+            Assert.AreEqual(999, list[list.Size-2]);
+            Assert.AreEqual(8, list[list.Size-3]);
+            Assert.AreEqual(9, list[list.Size-1]);
+            Assert.AreEqual(size+1, list.Size);
         }
 
         [Test]

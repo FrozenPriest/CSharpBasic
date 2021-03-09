@@ -85,7 +85,9 @@ namespace CSharpBasic
             else
             {
                 var lastNode = GetNode(key);
+                var nextNode = lastNode.Next;
                 lastNode.Next = new Node(value);
+                lastNode.Next.Next = nextNode;
             }
 
             Size++;
