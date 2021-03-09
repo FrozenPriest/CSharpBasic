@@ -1,5 +1,4 @@
-﻿
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
 namespace CSharpBasic
 {
@@ -97,17 +96,6 @@ namespace CSharpBasic
 
             if (node.Left != null && node.Right != null)
             {
-                /*
-                 * Если оба ребёнка присутствуют, то
-
-                        Если самый левый элемент правого поддерева m не имеет поддеревьев
-                            Копируем значения K, V из m в удаляемый элемент
-                            Удаляем m
-                        Если m имеет правое поддерево
-                            Копируем значения K, V из m в удаляемый элемент
-                            Заменяем у родительского узла ссылку на m ссылкой на правое поддерево m
-                            Удаляем m
-                 */
                 Node minInRightSubTree = node.Right;
                 while (minInRightSubTree.Left != null)
                 {
@@ -118,11 +106,6 @@ namespace CSharpBasic
                 node.Key = minInRightSubTree.Key;
                 RemoveNode(node.Right, minInRightSubTree.Key);
             }
-            /*
-             * Если одного из детей нет, то значения полей ребёнка m
-             * ставим вместо соответствующих значений корневого узла,
-             * затирая его старые значения, и освобождаем память, занимаемую узлом m;
-             */
             else if (node.Right != null)
             {
                 node.Key = node.Right.Key;
